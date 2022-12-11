@@ -21,58 +21,58 @@ const zeroKM3 = km3 == 0;
 //variables car03
 */
 
-const car01 = {
-  brand: `BMW`,
-  model: `X6`,
-  price: 67990,
-  year: 2021,
-  km: 10214,
-  newCar: false,
-};
+let cars = [
+  {
+    brand: `BMW`,
+    model: `X6`,
+    price: 67990,
+    year: 2021,
+    km: 10214,
+    newCar: false,
+  },
+  {
+    brand: `Mercedes`,
+    model: `EQS`,
+    price: 42450,
+    year: 2018,
+    km: 87421,
+    newCar: false,
+  },
+  {
+    brand: `Audi`,
+    model: `Q8`,
+    price: 56590,
+    year: 2023,
+    km: 0,
+    newCar: true,
+  },
+  {
+    brand: `Porsche`,
+    model: `911`,
+    price: 154900,
+    year: 2019,
+    km: 21214,
+    newCar: false,
+  },
+];
 
-const car02 = {
-  brand: `Mercedes`,
-  model: `EQS`,
-  price: 42450,
-  year: 2018,
-  km: 87421,
-  newCar: false,
-};
+function allCars() {
+  for (let car of cars) {
+    for (property in car) {
+      console.log(`${property}: ${car[property]}`);
+    }
 
-const car03 = {
-  brand: `Audi`,
-  model: `Q8`,
-  price: 56590,
-  year: 2023,
-  km: 0,
-  newCar: true,
-};
-
-const allCars = [];
-
-allCars.push(car01, car02, car03);
-
-function newProperties(value1, value2, value3) {
-  if (value1 === true) {
-    car01.financeable = true;
-  } else {
-    alert(`The ${car01[`brand`]} ${car01[`model`]} car isn't financeable.`);
+    console.log("----------------------");
   }
-  if (value2 === true) {
-    car02.financeable = true;
-  } else {
-    alert(`The ${car02[`brand`]} ${car02[`model`]} car isn't financeable.`);
-  }
-
-  if (value3 === true) {
-    car03.financeable = true;
-  } else {
-    alert(`The ${car03[`brand`]} ${car03[`model`]} car isn't financeable.`);
-  }
-
   return;
 }
 
-newProperties(true, false, true);
+allCars();
 
-console.table(allCars);
+function carsSearch(object) {
+  return console.log(cars[object]);
+}
+
+objectSearch(3);
+
+function arrayCars(array, string) {}
