@@ -54,6 +54,22 @@ let cars = [
     km: 21214,
     newCar: false,
   },
+  {
+    brand: `Audi`,
+    model: `A3`,
+    price: 25254,
+    year: 2017,
+    km: 84510,
+    newCar: false,
+  },
+  {
+    brand: `Volkswagen`,
+    model: `Golf`,
+    price: 17550,
+    year: 2019,
+    km: 75402,
+    newCar: false,
+  },
 ];
 
 function allCars() {
