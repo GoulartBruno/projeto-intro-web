@@ -4,66 +4,159 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap"
+      rel="stylesheet" />
+    <title>Find Your Car</title>
   </head>
   <body>
-    <header><h1>Cars</h1></header>
-    <div>
-      <label for="text"></label>
-      <input type="text" id="car" />
-      <input type="submit" value="Search" />
-    </div>
-    <div>
-      <section>
-        <ul>
-          <li>Brand: BMW</li>
-          <li>Model: <a href="https://www.bmw.de/de/neufahrzeuge/x/x6/2021/bmw-x6-ueberblick.html?&tl=sea-gl-DE_BMW_NEWCARS_X6_GER_BND-mix-miy-G06-sech-G06_BG_X6_PERF-.-e-bmw%20x6-.-.&clc=sea-gl-DE_BMW_NEWCARS_X6_GER_BND-mix-bg06&gaw=sea:11853514842_kwd-1518776526&gclid=Cj0KCQiA-oqdBhDfARIsAO0TrGHfVsB2_qUQT8OxSbT1as7fZguudoWlDJ4OcT2hgFf_U2p8GJ6NWZ8aApquEALw_wcB&gclsrc=aw.ds" target=_blank">X6 </a></li>
-          <li>Color: Black</li>
-          <li>Price: 67990</li>
-          <li>Year: 2021</li>
-          <li>Km: 10214</li>
-          <li>NewCar: No</li>
+    <header class="header">
+      <div>
+        <span id="span01-header">The </span>
+        <span id="span02-header">Car</span>
+        <span id="span01-header">Easy</span>
+        <p id="p01-header">Car research made easy</p>
+      </div>
+      <div>
+        <ul class="list-nav">
+          <li id="nav-icon01">New Cars</li>
+          |
+          <li id="nav-icon02">Used Cars</li>
+          |
+          <li id="nav-icon03">Research</li>
+          |
+          <li id="nav-icon04">Videos</li>
+          |
+          <li id="nav-icon05">News</li>
+          |
+          <li id="nav-icon06">Auto Finance</li>
         </ul>
+      </div>
+      <div>
+        <div id="search">
+          <label for="text"></label>
+          <input type="text" id="car" />
+          <input type="submit" value="Search" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="main-01">
+        <div>
+          <h1 id="main01-title">Car research made easy</h1>
+          <p id="main-01-p01">Get expert reviews, photos and comparisons</p>
+        </div>
+        <div class="main-01-form">
+          <p>What car do you want to research?</p>
+          <div class="form">
+            <select
+              class="make"
+              id="make"
+              required>
+              <option value="" disabled selected hidden>Select Make</option>
+              <option value=""></option>
+              <option value="ACURA">ACURA</option>
+              <option value="ASTON MARTIN">ASTON MARTIN</option>
+              <option value="AUDI">AUDI</option>
+              <option value="BENTLEY">BENTLEY</option>
+              <option value="BMW">BMW</option>
+              <option value="BUICK">BUICK</option>
+              <option value="CADILLAC">CADILLAC</option>
+              <option value="CHEVROLET">CHEVROLET</option>
+              <option value="CHRYSLER">CHRYSLER</option>
+              <option value="DODGE">DODGE</option>
+              <option value="FERRARI">FERRARI</option>
+              <option value="FORD">FORD</option>
+              <option value="GMC">GMC</option>
+              <option value="HONDA">HONDA</option>
+              <option value="HUMMER">HUMMER</option>
+              <option value="HYUNDAI">HYUNDAI</option>
+              <option value="INFINITI">INFINITI</option>
+              <option value="ISUZU">ISUZU</option>
+              <option value="JAGUAR">JAGUAR</option>
+              <option value="JEEP">JEEP</option>
+              <option value="KIA">KIA</option>
+              <option value="LAMBORGHINI">LAMBORGHINI</option>
+              <option value="LAND ROVER">LAND ROVER</option>
+              <option value="LEXUS">LEXUS</option>
+              <option value="LINCOLN">LINCOLN</option>
+              <option value="LOTUS">LOTUS</option>
+              <option value="MASERATI">MASERATI</option>
+              <option value="MAYBACH">MAYBACH</option>
+              <option value="MAZDA">MAZDA</option>
+              <option value="MERCEDES-BENZ">MERCEDES-BENZ</option>
+              <option value="MERCURY">MERCURY</option>
+              <option value="MINI">MINI</option>
+              <option value="MITSUBISHI">MITSUBISHI</option>
+              <option value="NISSAN">NISSAN</option>
+              <option value="PONTIAC">PONTIAC</option>
+              <option value="PORSCHE">PORSCHE</option>
+              <option value="ROLLS-ROYCE">ROLLS-ROYCE</option>
+              <option value="SAAB">SAAB</option>
+              <option value="SATURN">SATURN</option>
+              <option value="SUBARU">SUBARU</option>
+              <option value="SUZUKI">SUZUKI</option>
+              <option value="TOYOTA">TOYOTA</option>
+              <option value="VOLKSWAGEN">VOLKSWAGEN</option>
+              <option value="VOLVO">VOLVO</option></select
+            ><select
+              class="Model"
+              id="model"
+            required>
+            <option value="" disabled selected hidden>Select Model</option>
+            <option value=""></option>
+            
+            </select>
+            <select
+              class="year"
+              id="year"
+              required>
+              <option value="" disabled selected hidden>Select Year</option>
+              <option value=""></option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+            <option value="2014">2014</option>
+            <option value="2013">2013</option>
+            <option value="2012">2012</option>
+            <option value="2011">2011</option>
+            <option value="2010">2010</option>
+            <option value="2009">2009</option>
+            <option value="2008">2008</option>
+            <option value="2007">2007</option>
+            <option value="2006">2006</option>
+            <option value="2005">2005</option>
+            <option value="2004">2004</option>
+            <option value="2003">2003</option>
+            <option value="2002">2002</option>
+            <option value="2001">2001</option>
+            <option value="2000">2000</option>
+            <option value="1999">1999</option>
+            <option value="1998">1998</option>
+            <option value="1997">1997</option>
+            <option value="1996">1996</option>
+            <option value="1995">1995</option>
+            <option value="1994">1994</option>
+            <option value="1993">1993</option>
+            <option value="1992">1992</option>
+            <option value="1991">1991</option>
+            <option value="1990">1990</option></select
+            </div>
+            <input type="button" id="button-go" value="GO"></div>
+        </div>
       </section>
-      <section>
-        <ul>
-          <li>Brand: Mercedes</li>
-          <li>Model: <a href="https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqs/saloon-v297/explore.html" target=_blank">EQS </a></li>
-          <li>Color: white</li>
-          <li>Price: 87421</li>
-          <li>Year: 2018</li>
-          <li>Km: 87421</li>
-          <li>NewCar: No</li>
-        </ul>
-      </section>
-      <section>
-        <ul>
-          <li>Brand: Audi</li>
-          <li>Model:             <a href="https://www.audi.de/de/brand/de/neuwagen/q8/q8.html"" target=_blank">Q8 </a>
-          </li>
-          <li>Color: Red</li>
-          <li>Price: 56590</li>
-          <li>Year: 2023</li>
-          <li>Km: 0</li>
-          <li>NewCar: Yes</li>
-        </ul>
-      </section>
-      <section>
-        <ul>
-          <li>Brand: Porshe</li>
-          <li>
-            Model:
-            <a href="https://www.porsche.com/international/models/911/"" target=_blank">911 </a>
-          </li>
-          <li>Color: Black</li>
-          <li>Price: 154900</li>
-          <li>Year: 2019</li>
-          <li>Km: 21214</li>
-          <li>NewCar: No</li>
-        </ul>
-      </section>
-    </div>
+    </main>
     <footer></footer>
   </body>
 </html>
