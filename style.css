@@ -1,0 +1,162 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.header {
+  color: #003145;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: bold;
+  height: 50px;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px;
+}
+
+.list-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 15px;
+  padding: 3px 0px;
+  font-size: 14px;
+}
+
+#span01-header {
+  font-size: 20px;
+}
+#span02-header {
+  font-size: 20px;
+  color: rgb(239, 82, 82);
+}
+
+#p01-header {
+  padding-left: 20px;
+  font-size: 9px;
+}
+
+#nav-icon01 {
+  cursor: pointer;
+}
+#nav-icon01:hover {
+  text-decoration: underline 2px rgb(239, 82, 82);
+}
+#nav-icon02 {
+  cursor: pointer;
+}
+#nav-icon02:hover {
+  text-decoration: underline 2px rgb(239, 82, 82);
+}
+#nav-icon03 {
+  cursor: pointer;
+}
+#nav-icon03:hover {
+  text-decoration: underline 2px rgb(239, 82, 82);
+}
+#nav-icon04 {
+  cursor: pointer;
+}
+#nav-icon04:hover {
+  text-decoration: underline 2px rgb(239, 82, 82);
+}
+#nav-icon05 {
+  cursor: pointer;
+}
+#nav-icon05:hover {
+  text-decoration: underline 2px rgb(239, 82, 82);
+}
+#nav-icon06 {
+  cursor: pointer;
+}
+#nav-icon06:hover {
+  text-decoration: underline 2px rgb(239, 82, 82);
+}
+
+#search {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.main-01 {
+  font-family: Helvetica, Arial, sans-serif;
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("./images/car-main01.jpg");
+  display: flex;
+  display: flex;
+  flex-direction: row;
+}
+#main01-title {
+  color: #fbfeff;
+  font-size: 48px;
+  width: 400px;
+  padding: 40px 0px 15px 40px;
+}
+
+#main-01-p01 {
+  width: 300px;
+  padding-left: 40px;
+  color: #fbfeff;
+  font-size: 20px;
+}
+
+.main-01-form {
+  color: #ffff;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: rgb(255, 255, 255, 0.7);
+  width: 580px;
+  height: 100px;
+  display: grid;
+  align-self: center;
+  padding: 20px 0px 0px 20px;
+  margin: 50px 0px 0px 50px;
+}
+.form {
+  width: 120px;
+  height: 30px;
+
+  background-color: #f5f3f3;
+  display: flex;
+  gap: 10px;
+}
+.main-01-form p {
+  color: fff;
+}
+
+#make {
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#model {
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#year {
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#button-go {
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #7dbc12;
+  font-weight: bold;
+  padding: 0px 40px;
+  cursor: pointer;
+}
