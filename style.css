@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.container {
+  width: 100vw;
+}
+
 .header {
   color: #003145;
   font-family: "Libre Franklin", sans-serif;
@@ -84,24 +88,27 @@
 
 .main-01 {
   font-family: Helvetica, Arial, sans-serif;
-  height: 80vh;
+  background-color: #003145;
+  background-size: 500px;
   background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url("./images/car-main01.jpg");
-  display: flex;
+  background-position: right 50px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 #main01-title {
   color: #fbfeff;
   font-size: 48px;
-  width: 400px;
+  width: 335px;
   padding: 40px 0px 15px 40px;
 }
 
 #main-01-p01 {
   width: 300px;
   padding-left: 40px;
+  padding-bottom: 50px;
   color: #fbfeff;
   font-size: 20px;
 }
@@ -113,15 +120,13 @@
   background-color: rgb(255, 255, 255, 0.7);
   width: 580px;
   height: 100px;
-  display: grid;
-  align-self: center;
   padding: 20px 0px 0px 20px;
-  margin: 50px 0px 0px 50px;
+  margin: 0px 20px 0px 20px;
 }
+
 .form {
   width: 120px;
   height: 30px;
-
   background-color: #f5f3f3;
   display: flex;
   gap: 10px;
@@ -136,6 +141,7 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
 #model {
   font-size: 16px;
   border: none;
@@ -151,6 +157,7 @@
 }
 
 #button-go {
+  width: 100px;
   color: white;
   font-size: 16px;
   border: none;
