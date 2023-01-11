@@ -12,49 +12,64 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap"
       rel="stylesheet" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      <script src="index.js"></script>      
+      
     <title>Find Your Car</title>
   </head>
   <body>
     
-    <main class="container">
+  <main class="container">
 
-<header class="header">
-  <div>
-    <span id="span01-header">The </span>
-    <span id="span02-header">Car</span>
-    <span id="span01-header">Easy</span>
-    <p id="p01-header">Car research made easy</p>
-  </div>
-  <div>
-    <ul class="list-nav">
-      <li id="nav-icon01">New Cars</li>
-      |
-      <li id="nav-icon02">Used Cars</li>
-      |
-      <li id="nav-icon03">Research</li>
-      |
-      <li id="nav-icon04">Videos</li>
-      |
-      <li id="nav-icon05">News</li>
-      |
-      <li id="nav-icon06">Auto Finance</li>
-    </ul>
-  </div>
-  <div>
-    <div id="search">
-      <label for="text"></label>
-      <input type="text" id="car" />
-      <input type="submit" value="Search" />
-    </div>
-  </div>
-</header>
-<section>
-  <section class="main-01">
-    <div>
+    <header class="header">
+      <div class="logo">
+        <span id="span01-header">The </span>
+        <span id="span02-header">Car</span>
+        <span id="span01-header">Easy</span>
+        <p id="p01-header">Car research made easy</p>
+      </div>
+      <div>
+        <ul class="list-nav">
+          <li id="nav-icon01">New Cars</li>
+          | 
+          <li id="nav-icon02">Used Cars</li>
+          |
+          <li id="nav-icon04">Videos</li>
+          |
+          <li id="nav-icon05">News</li>
+          |
+          <li id="nav-icon06">Auto Finance</li>
+          |
+          <li id="nav-icon03">Research</li>
+        </ul>
+      </div>
+       <div>
+         <form action="http://www.google.com/search" method="get">
+           <input type="text" name="q" id="google-search" placeholder="Google Search"/>
+           <input type="submit" id="search-button" value="Search" />
+         </form>
+        </div>
+        <div  id="nav">  
+          <button id="btn-mobile" onclick="toggleMenu()">Menu 
+          <span id="hamburger"></span>
+          </button>
+        
+          <ul id="menu">
+              <li id="nav-icon01">New Cars</li>
+              <li id="nav-icon02">Used Cars</li>
+              <li id="nav-icon04">Videos</li>
+              <li id="nav-icon05">News</li>
+              <li id="nav-icon06">Auto Finance</li>
+              <li id="nav-icon03">Research</li>
+          </ul>
+        </div>
+    </header>
+  <section class="contanier-01">
+    <div class="box-01" >
       <h1 id="main01-title">Car research made easy</h1>
       <p id="main-01-p01">Get expert reviews, photos and comparisons</p>
     </div>
-    <div class="main-01-form">
+    <div class="box-02-form">
       <p>What car do you want to research?</p>
       <div class="form">
         <select
@@ -106,14 +121,13 @@
           <option value="SUZUKI">SUZUKI</option>
           <option value="TOYOTA">TOYOTA</option>
           <option value="VOLKSWAGEN">VOLKSWAGEN</option>
-          <option value="VOLVO">VOLVO</option></select
-        ><select
+          <option value="VOLVO">VOLVO</option></select>
+        <select
           class="Model"
-          id="model"
-        required>
+          id="selectmodel"
+          required>
         <option value="" disabled selected hidden>Select Model</option>
         <option value=""></option>
-
         </select>
         <select
           class="year"
@@ -157,12 +171,68 @@
           <option value="2014">2014</option>
         </select>
         <input type="button" id="button-go" value="GO"></div>
-
-        </div>
+      </div>
     </div>
-  </section>
-  <footer></footer>
-</main>
+   </section>
+   <section class="contanier-02">
+    <div class="cars">
+      <img id="img-car" src="./images/bmw-X6-2021.png" alt="BMW X6">
+      <ul id="car">
+      <div id="title-cars">
+      <li id="ano">2021</li>
+      <li id="brand">BMW</li>
+      <li id="model"><a href="https://www.bmw.de/de/neufahrzeuge/x/x6/2021/bmw-x6-ueberblick.html?&tl=sea-gl-DE_BMW_NEWCARS_X6_GER_BND-mix-miy-G06-sech-G06_BG_X6_PERF-.-e-bmw%20x6-.-.&clc=sea-gl-DE_BMW_NEWCARS_X6_GER_BND-mix-bg06&gaw=sea:11853514842_kwd-1518776526&gclid=Cj0KCQiA-oqdBhDfARIsAO0TrGHfVsB2_qUQT8OxSbT1as7fZguudoWlDJ4OcT2hgFf_U2p8GJ6NWZ8aApquEALw_wcB&gclsrc=aw.ds" target=_blank">X6 </a></li>
+      <li id="price">$67,990</li>
+    </div>
+    <div class="summary">
+      <li id="color">Silver</li>
+      <li id="km">87421 Kilometers</li>
+      <li id="newcar">New</li>
+    </div>
+    </ul>
+  </div>
+  <div class="cars">
+    <img id="img-car" src="./images/Mercedes-EQS-2022.png" alt="Mercedes EQS">
+    <ul id="car">
+      <li id="brand">Mercedes</li>
+      <li id="model"><a href="https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqs/saloon-v297/explore.html" target=_blank">EQS </a></li>
+      <li id="ano">2018</li>
+      <li id="color">Color: white</li>
+      <li id="price">Price: 87421</li>
+      <li id="km">87421 Kilometers</li>
+      <li id="newcar">New</li>
+    </ul>
+  </div>
+  <div class="cars"> 
+    <img id="img-car" src="./images/Audi-Q8-2018.png" alt="Audi Q8">
+    <ul id="car">
+      <li id="brand">Audi</li>
+      <li id="model"><a href="https://www.audi.de/de/brand/de/neuwagen/q8/q8.html"" target=_blank">Q8 </a>
+      </li>
+      <li id="ano">Year: 2023</li>
+      <li id="color">Color: Red</li>
+      <li id="price">Price: 56590</li>
+      <li id="km">0 kilometer</li>
+      <li id="newcar">New</li>
+    </ul>
+  </div>
+  <div class="cars">
+    <img id="img-car"src="./images/Porshe-911-2019.png" alt="Porche 911">
+    <ul id="car">
+      <li id="brand">Porshe</li>
+      <li id="model">
+        <a href="https://www.porsche.com/international/models/911/"" target=_blank">911 </a>
+      </li>
+      <li id="ano">Year: 2019</li>
+      <li id="color">Color: Black</li>
+      <li id="price">Price: 154900</li>
+      <li id="km">21214 Kilometers</li>
+      <li id="newcar">Used</li>
+    </ul>
+  </div>
+</section>
+   <footer></footer>
+  </main>
 </body>
 </html>
 
