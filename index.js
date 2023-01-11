@@ -81,6 +81,11 @@ function carsSearch(object) {
   return console.log(cars[object]);
 }
 
-objectSearch(3);
+const btnMobile = document.getElementById("btn-mobile");
 
-function arrayCars(array, string) {}
+const toggleMenu = () => {
+  const nav = document.getElementById("nav");
+  nav.classList.toggle("active");
+};
+
+btnMobile.addEventListener("click", toggleMenu);
