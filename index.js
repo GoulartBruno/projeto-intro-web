@@ -42,6 +42,7 @@ let cars = [
     newCar: "Used",
     color: "silver",
     tramission: "Automatic Transmission",
+    link: "https://www.bmw.de/de/neufahrzeuge/x/x6/2021/bmw-x6-ueberblick.html?&tl=sea-gl-DE_BMW_NEWCARS_X6_GER_BND-mix-miy-G06-sech-G06_BG_X6_PERF-.-e-bmw%20x6-.-.&clc=sea-gl-DE_BMW_NEWCARS_X6_GER_BND-mix-bg06&gaw=sea:11853514842_kwd-1518776526&gclid=Cj0KCQiA-oqdBhDfARIsAO0TrGHfVsB2_qUQT8OxSbT1as7fZguudoWlDJ4OcT2hgFf_U2p8GJ6NWZ8aApquEALw_wcB&gclsrc=aw.ds",
   },
   {
     img: "./images/Mercedes-EQS-2022.png",
@@ -53,6 +54,7 @@ let cars = [
     newCar: "Used",
     color: "Gray",
     tramission: "Automatic Transmission",
+    link: "https://www.mercedes-benz.de/passengercars/mercedes-benz-cars/models/eqs/saloon-v297/explore.html",
   },
   {
     img: "./images/Audi-Q8-2018.png",
@@ -64,6 +66,7 @@ let cars = [
     newCar: "New",
     color: "Black",
     tramission: "Automatic Transmission",
+    link: "https://www.audi.de/de/brand/de/neuwagen/q8/q8.html",
   },
   {
     img: "./images/Porshe-911-2019.png",
@@ -75,6 +78,7 @@ let cars = [
     newCar: "Used",
     color: "Black",
     tramission: "Automatic Transmission",
+    link: "https://www.porsche.com/international/models/911/",
   },
   {
     img: "./images/golf-2019.png",
@@ -86,6 +90,7 @@ let cars = [
     newCar: "Used",
     color: "Black",
     tramission: "Automatic Transmission",
+    link: "https://www.volkswagen-newsroom.com/de/golf-5440",
   },
   {
     img: "./images/corrola-2022.png",
@@ -97,6 +102,7 @@ let cars = [
     newCar: "Used",
     color: "Black",
     tramission: "Automatic Transmission",
+    link: "https://www.toyota.de/neuwagen/corolla?gclid=CjwKCAiA5Y6eBhAbEiwA_2ZWIcCl_XQFEirIHNGhacc2UlItBQmibMJ3x02qpw1cYmRfWCUDdbTXuxoCp8MQAvD_BwE&gclsrc=aw.ds",
   },
   {
     img: "./images/corsa-2015.png",
@@ -108,6 +114,7 @@ let cars = [
     newCar: "Used",
     color: "Gray",
     tramission: "Automatic Transmission",
+    link: "https://www.opel.de/fahrzeuge/corsa-modelle/corsa/uebersicht.html",
   },
   {
     img: "./images/audi-Q3.png",
@@ -119,6 +126,7 @@ let cars = [
     newCar: "Used",
     color: "White",
     tramission: "Automatic Transmission",
+    link: "https://www.audi.de/de/brand/de/neuwagen/q3/q3.html?csref=sea:cdi:23252601983_kwd-296254339083&gclid=CjwKCAiA5Y6eBhAbEiwA_2ZWIfcICcy_IgnESGBpjrGce62SwpeC9fpoUs0AHN7QqsFxacKUkOSvWRoCLcoQAvD_BwE&gclsrc=aw.ds",
   },
   {
     img: "./images/volwswagen-sharan.png",
@@ -130,6 +138,7 @@ let cars = [
     newCar: "Used",
     color: "Black",
     tramission: "Automatic Transmission",
+    link: "https://www.volkswagen-albertsmeyer-nordhausen.de/de/modelle/sharan.html?adchan=sem&campaign={Brand_Modelle_Sharan_BMM}&adgroup={Sharan_Modell_BMM}&adlid={77054}&publisher=google&adpl=google&country=DE&format=p&language=DE&adplt=g&adcr=sharan%20volkswagen&adap=tp|PIA#item=1&gallery=150392783269679652",
   },
   {
     img: "./images/peugeot-508.png",
@@ -141,11 +150,20 @@ let cars = [
     newCar: "Used",
     color: "Black",
     tramission: "Automatic Transmission",
+    link: "https://www.peugeot.de/modelle/limousine-508.html",
   },
 ];
-/*
-function allCars() {
-  for (let car of cars) {
+//array de todos os carros
+
+let soma = 0;
+for (let i = 0; i < cars.length; i++) {
+  soma += cars[i].km;
+}
+console.log(`A média de kilonetros entre os carros é ${soma / cars.length}`);
+//médio de km dos carros
+
+function allCars(carros) {
+  for (let car of carros) {
     for (property in car) {
       console.log(`${property}: ${car[property]}`);
     }
@@ -154,13 +172,13 @@ function allCars() {
   }
   return;
 }
-
-console.log(allCars(cars));*/
+console.log(allCars(cars));
+//funcão todos os carros
 
 function carsSearch(object, carName) {
   let carroEncontrado = "";
   for (let i in object) {
-    if (object[i].brand.toLowerCase().includes(carName)) {
+    if (object[i].brand.includes(carName)) {
       carroEncontrado = object[i].brand;
 
       console.log(object[i]);
@@ -170,8 +188,8 @@ function carsSearch(object, carName) {
     console.log("Carro não encontrado");
   }
 }
-
-carsSearch(cars, "mercedes");
+carsSearch(cars, "bmw");
+//função porcurar carros
 
 const btnMobile = document.getElementById("btn-mobile");
 
@@ -179,6 +197,7 @@ const toggleMenu = () => {
   const nav = document.getElementById("nav");
   nav.classList.toggle("active");
 };
+//menu hamgurger, adiciona nova classe para ativar e desativar
 
 const input = document.getElementById("car-research");
 const container = document.getElementById("cars");
@@ -197,7 +216,7 @@ input.addEventListener("input", (e) => {
     <img id="img-car" src=${card.img} >
     <ul id="title-cars">
       <li id="brand">${card.brand}  </li>
-      <li id="model">${card.model}  </li>
+      <li id="model"><a id="link-cars" href="${card.link}" target=_blank">${card.model}</a>
       <li id="ano">${card.year}  </li>
       <li id="price">${card.price}  </li>
       </ul>
@@ -212,3 +231,4 @@ input.addEventListener("input", (e) => {
   }
   container.innerHTML += info;
 });
+//input de busca
