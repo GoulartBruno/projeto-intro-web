@@ -1,35 +1,32 @@
-const brand1 = "BMW";
-const model1 = "X6";
-const year1 = 2021;
-const km1 = 87.421;
-const zeroKM1 = km1 == 0;
-const color1 = "silver";
-//variables car01
+// const brand1 = "BMW";
+// const model1 = "X6";
+// const year1 = 2021;
+// const km1 = 87.421;
+// const zeroKM1 = km1 == 0;
+// const color1 = "silver";
 
-const brand2 = "Mercedes";
-const model2 = "EQS";
-const year2 = 2022;
-const km2 = 22.421;
-const zeroKM2 = km2 == 0;
-const color2 = "gray";
-//variables car02
+// const brand2 = "Mercedes";
+// const model2 = "EQS";
+// const year2 = 2022;
+// const km2 = 22.421;
+// const zeroKM2 = km2 == 0;
+// const color2 = "gray";
 
-const brand3 = "Audi";
-const model3 = "Q8";
-const year3 = 2023;
-const km3 = 0;
-const zeroKM3 = km3 == 0;
-const color3 = "black";
-//variables car03
+// const brand3 = "Audi";
+// const model3 = "Q8";
+// const year3 = 2023;
+// const km3 = 0;
+// const zeroKM3 = km3 == 0;
+// const color3 = "black";
 
-const brand4 = "Porshe";
-const model4 = "911";
-const year4 = 2019;
-const km4 = 42.454;
-const zeroKM4 = km3 == 0;
-const color4 = "black";
+// const brand4 = "Porshe";
+// const model4 = "911";
+// const year4 = 2019;
+// const km4 = 42.454;
+// const zeroKM4 = km3 == 0;
+// const color4 = "black";
 
-//variables car03
+//constantes criadas nas primeiras semanas, não usadas durante o restante do projeto
 
 let cars = [
   {
@@ -37,6 +34,7 @@ let cars = [
     brand: `BMW`,
     model: `X6`,
     price: "$67.990",
+    zeroKm: false,
     year: 2021,
     km: 87421,
     newCar: "Used",
@@ -49,6 +47,7 @@ let cars = [
     brand: `Mercedes`,
     model: `EQS`,
     price: "$92.480",
+    zeroKm: false,
     year: 2022,
     km: 22421,
     newCar: "Used",
@@ -61,6 +60,7 @@ let cars = [
     brand: `Audi`,
     model: `Q8`,
     price: "$92.480",
+    zeroKm: true,
     year: 2023,
     km: 0,
     newCar: "New",
@@ -73,6 +73,7 @@ let cars = [
     brand: `Porsche`,
     model: `911`,
     price: "$102.990",
+    zeroKm: false,
     year: 2019,
     km: 42452,
     newCar: "Used",
@@ -85,6 +86,7 @@ let cars = [
     brand: `Volkswagen`,
     model: `Golf`,
     price: "$17.599",
+    zeroKm: false,
     year: 2019,
     km: 42452,
     newCar: "Used",
@@ -97,6 +99,7 @@ let cars = [
     brand: `Toyota`,
     model: `Corolla`,
     price: "$27.990",
+    zeroKm: false,
     year: 2022,
     km: 3000,
     newCar: "Used",
@@ -109,6 +112,7 @@ let cars = [
     brand: `Opel`,
     model: `Corsa`,
     price: "$11.950",
+    zeroKm: false,
     year: 2015,
     km: 43401,
     newCar: "Used",
@@ -121,6 +125,7 @@ let cars = [
     brand: `Audi`,
     model: `Q3`,
     price: "$49.950",
+    zeroKm: false,
     year: 2022,
     km: 11850,
     newCar: "Used",
@@ -133,6 +138,7 @@ let cars = [
     brand: `Volkswagen`,
     model: `Sharan`,
     price: "$12.999",
+    zeroKm: false,
     year: 2016,
     km: 233000,
     newCar: "Used",
@@ -145,6 +151,7 @@ let cars = [
     brand: `Peugeot`,
     model: `508`,
     price: "$28.489",
+    zeroKm: false,
     year: 2020,
     km: 79824,
     newCar: "Used",
@@ -153,14 +160,40 @@ let cars = [
     link: "https://www.peugeot.de/modelle/limousine-508.html",
   },
 ];
-//array de todos os carros
+//array de todos os carros e suas caracteristica
 
 let soma = 0;
 for (let i = 0; i < cars.length; i++) {
   soma += cars[i].km;
 }
-console.log(`A média de kilonetros entre os carros é ${soma / cars.length}`);
-//médio de km dos carros
+console.log(`A média de kilometros entre os carros é ${soma / cars.length}
+---------------`);
+//Média numérica(kilometros) calculada e impressa no console
+
+function testBoleano(carros) {
+  for (let i in carros) {
+    if (carros[i].zeroKm === true) {
+      console.log(`${carros[i].brand} ${carros[i].model} é Zero Kilometros`);
+      console.log("");
+    } else {
+      console.log(
+        `${carros[i].brand} ${carros[i].model} não é zero Kilometros`
+      );
+      console.log("");
+    }
+  }
+  return;
+}
+//funçao verificação de valores booleanos true impressa no console, verifica se o carro é zero km ou não
+
+testBoleano(cars);
+//chamada da funçao todos os carros
+console.log("-----------------------");
+
+console.log(
+  `Relatório impresso de todos os carros.
+  `
+);
 
 function allCars(carros) {
   for (let car of carros) {
@@ -172,24 +205,27 @@ function allCars(carros) {
   }
   return;
 }
-console.log(allCars(cars));
-//funcão todos os carros
-
+allCars(cars);
+//funcão de relatório impresso no console com as informações de cada carro
+console.log("Funçao procura marca de carros.");
 function carsSearch(object, carName) {
   let carroEncontrado = "";
-  for (let i in object) {
-    if (object[i].brand.includes(carName)) {
-      carroEncontrado = object[i].brand;
 
+  for (let i in object) {
+    if (object[i].brand.toLowerCase().includes(carName.toLowerCase())) {
+      carroEncontrado = object[i].brand;
       console.log(object[i]);
+    } else if (carroEncontrado === "") {
+      console.log(
+        "Nenhum carro dessa marca encontrado, por favor tente outra marca."
+      );
     }
-  }
-  if (carroEncontrado !== carName) {
-    console.log("Carro não encontrado");
   }
 }
 carsSearch(cars, "bmw");
-//função porcurar carros
+//função porcurar marcas de carros
+
+console.log("------------------");
 
 const btnMobile = document.getElementById("btn-mobile");
 
